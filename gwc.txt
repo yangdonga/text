@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			img{
+				width:100px;
+			}
+			.dest{
+				width:500px;
+				height:200px;
+				border: 1px solid #000;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="source">
+			<img src="img/1.jpg" alt="" id="one"  />
+			<img src="img/2.jpg" alt="" id="two" />
+			<img src="img/3.jpg" alt="" id="three" />
+			
+		</div>
+		
+		<div class="dest">
+			
+		</div>
+		<script>
+			var source = document.querySelector(".source");
+			var dest = document.querySelector(".dest");
+			var dragimg=null;
+			source.ondragstart=function(e){
+				  dragimg=document.getElementById(e.target.id);
+			}
+			dest.ondragover=function(e){
+				e.preventDefault();
+			}
+			dest.ondrop=function(){
+				var imgCopy = dragimg.cloneNode(true);
+				this.appendChild(imgCopy);
+			}
+		</script>
+	</body>
+</html>
+杨东 15:07:34
+孙老师发下代码
+杨东 15:16:26
+孙老师发下代码
+sunlaoshi 16:37:39 (多人发送)
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/jquery-3.2.1.js"></script>
+		<script>
+			$(function(){
+				$(":checkbox:first").click(function(){
+					$(":checkbox:gt(0)").prop("checked",$(this).prop("checked"));
+					getAll();
+				})
+				
+				$(":checkbox:gt(0)").click(function(){
+					
+					if($(":checkbox:gt(0)").length==$(":checkbox:gt(0):checked").length){
+						$(":checkbox:first").prop("checked",true);
+					}
+					else{
+						$(":checkbox:first").prop("checked",false);
+					}
+					getAll();
+				})
+				function getAll(){
+					$("#show").html("");
+					$("#geshu").html("");
+					$("#money").html("");
+					var n=0;
+					var all=0;
+					$(":checkbox:gt(0)").each(function(){
+						  if(this.checked){
+						  	var t =   $(this).parent().next().children("img");
+						  	$("#show").append(t.clone());
+						  	 var count =parseInt($(this).parent().nextAll().children("p").html());
+						  	 var price=parseFloat($(this).parent().next().next().next().next().html());
+						     n+=count;
+						     all+=price;
+						  }
+						 
+						$("#geshu").html(n);  
+						$("#money").html(all);
+					})
+			
+				}
+				$("button").click(function(){
+					$(this).parent().parent().remove();
+					getAll();
+				})
+				$(".btnjia").click(function(){
+					var n=parseInt($(this).prev().html())+1;
+					$(this).prev().html(n);
+					var price=parseFloat($(this).parent().prev().html());
+					
+					$(this).parent().next().html((price*n).toFixed(2));
+					getAll();
+				})
+				$(".btnjian").click(function(){
+					
+					var n=parseInt($(this).next().html())-1;
+					if(n<=1){
+					   n=1;
+				    }
+					$(this).next().html(n);
+					getAll();
+					
+				})
+				
+			})
+			
+		</script>
+	</head>
+	<body>
+		<table border="1" id="tab">
+			<tr>
+				<th><input type="checkbox" />全选/全不选</th>
+				<th>商品</th>
+				<th>单价(千元)</th>
+				<th>数量(台)</th>
+				<th>合计(千元)</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<td><input type="checkbox" />迷你相机</td>
+				<td><img src="img/1.jpg" /></td>
+				<td>5.00</td>
+				<td><span class="btnjian">－</span>
+					<p>1</p><span class="btnjia">＋</span></td>
+				<td>5.00</td>
+				<td><button>del</button></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" />康佳相机</td>
+				<td><img src="img/2.jpg" /></td>
+				<td>10.00</td>
+				<td><span class="btnjian">－</span>
+					<p>1</p><span class="btnjia">＋</span></td>
+				<td>10.00</td>
+				<td><button>del</button></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" />索尼相机</td>
+				<td><img src="img/3.jpg" /></td>
+				<td>17.50</td>
+				<td><span class="btnjian">－</span>
+					<p>1</p><span class="btnjia">＋</span></td>
+				<td>17.50</td>
+				<td><button>del</button></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" />拍立得</td>
+				<td><img src="img/4.jpg" /></td>
+				<td>9.50</td>
+				<td><span class="btnjian">－</span>
+					<p>1</p><span class="btnjia">＋</span></td>
+				<td>9.50</td>
+				<td><button>del</button></td>
+			</tr>
+		</table>
+		<div class="demo">
+			<div id="show">
+				
+			</div>
+			<span id="geshu"></span>
+			<p id="money"></p>
+		</div>
+	</body>
+</html>
