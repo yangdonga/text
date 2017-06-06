@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script>
+			  document.documentElement.style.fontSize=innerWidth/16+"px";
+		</script>
+	</head>
+	<style>
+		  html,body{
+		  	 width:100%;
+		  	 height: 100%;
+		  	 margin:0;
+		  }  
+		  div{
+		  	 width:100%;
+		  	 height: 300px;
+		     position:relative;
+		    /*  overflow: hidden;*/
+		  }
+		  ul{
+		  	 position: absolute;
+		  	 transition:  transform 2s;
+		  	 top:0;
+		  	 left:0;
+		  	 margin:0;padding:0;list-style: none;
+		  	 width:400%;
+		  	 height: 300px;
+		  	
+		  	 
+		  }
+		  li{
+		  	  width:16rem;
+		  	  height: 300px;
+		  	  float: left;
+		  }
+		  li:nth-child(4n+1){
+		  	  background: red;
+		  	  background-size:100% 100% ;
+		  }
+		  li:nth-child(4n+2){
+		  	  background: blue;
+		  	
+		  	    background-size:100% 100% ;
+		  }
+		   li:nth-child(4n+3){
+		  	  background:pink;
+		  	  
+		  	    background-size:100% 100% ;
+		  }
+		   li:nth-child(4n){
+		  	  background:yellow;
+		  	  
+		  	    background-size:100% 100% ;
+		  }
+		  
+		  
+	</style>
+	<body>
+		<div id="one">
+			<ul id="list">
+				 <li>1111</li>
+				 <li>w222</li>
+				 <li>333</li>
+				 <li>444 <button>点击链接</button></li>
+			</ul>
+			<ol class="btn" id="btn">
+			<li><a href="#" class="bg"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+		</ol>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				$("#one")[0].addEventListener("touchstart",function(ev){
+					ev.preventDefault();
+				})
+				var n=0;
+				$(function(){
+					var size=$("#list").find("li").size()
+					var w=$(window).width();
+					$("#one").on("swipeLeft",function(){
+						n++
+						if(n>=size){
+							n=size-1;
+							
+						}
+						$("#list").css("-webkit-transform","translate3d("+(-n*w)+"px,0,0)")
+					})
+					$("#one").on("swipeRight",function(){
+						n--
+						if(n<0){
+							n=0;
+							
+						}
+						$("#list").css("-webkit-transform","translate3d("+(-n*w)+"px,0,0)")
+					})
+				})
+				$("button").on("tap",function(){
+		         	  location.href="http://www.qq.com";
+		         })
+			})
+		</script>
+	</body>
+</html>
