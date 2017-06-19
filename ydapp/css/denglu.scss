@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica,STHeiti,Droid Sans Fallback;
+}
+body,div,ol,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,form,fieldset,legend,input{ margin:0; padding:0;}
+
+.clearfix::after,
+.clearfix::before{
+     content:'';
+     height: 0;
+     display: block;
+     line-height: 0;
+     clear:both;
+} 
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    -webkit-user-select: none;
+    -webkit-text-size-adjust: 100%;
+}
+a{
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style: none;
+}
+$r:20;
+header{
+    width: 100%;
+    height: 60/$r+rem;
+    padding-top: 20/$r+rem;
+    background: #fff;
+    .top{
+        
+        a{
+            .tb{
+                position: relative;
+                width: 16/$r+rem;
+                height: 16/$r+rem;
+                overflow: hidden;
+                float: left;
+                margin-left:10/$r+rem;
+                margin-right: 15/$r+rem;
+                span{
+                    display: block;
+                    width: 16/$r+rem;
+                    height:16/$r+rem;
+                    border: 1px solid #333;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    left: 8/$r+rem;
+                }
+            }
+            .wz{
+                height: 16/$r+rem;
+                float: left;
+                font-size: 14/$r+rem;
+            }
+        }
+    }
+   
+}
+section{
+    padding-top: 40/$r+rem;
+    width:100%;
+    
+    position: relative;
+    .register{
+        width: 100%;
+        p{
+            margin-left: 10%;
+            border: 1px solid #ccc;
+            width: 80%;
+            height: 44/$r+rem;
+            background: #FFFFFF;
+            &:nth-child(2){
+                border-top: none;
+            }
+            input{
+                border: none;
+                outline: none;
+                width: 90%;
+                height: 40/$r+rem;
+                margin-left: 5%;
+            }
+        }
+    }
+    .dl{
+        width: 80%;
+        background: blue;
+        margin-left: 10%;
+        margin-top: 20/$r+rem;
+        border-radius: 5/$r+rem;
+        height: 44/$r+rem;
+        text-align: center;
+        line-height: 44/$r+rem;
+        color: #fff;
+        font-size: 16/$r+rem;
+    }
+    .info{
+        position: absolute;
+        top: 0/$r+rem;
+        width: 100%;
+        height: 200/$r+rem;
+        background: rgba(122,122,122,0.7);
+        text-align: center;
+        
+        color: #333333;
+        line-height: 200/$r+rem;
+        
+    }
+}
+

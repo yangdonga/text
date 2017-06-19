@@ -1,0 +1,23 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Helvetica,STHeiti,Droid Sans Fallback; }
+
+body, div, ol, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, form, fieldset, legend, input { margin: 0; padding: 0; }
+
+.clearfix::after, .clearfix::before { content: ''; height: 0; display: block; line-height: 0; clear: both; }
+
+html { width: 100%; height: 100%; }
+
+body { width: 100%; height: 100%; background: #eee; -webkit-user-select: none; -webkit-text-size-adjust: 100%; }
+
+a { -webkit-tap-highlight-color: transparent; text-decoration: none; color: black; }
+
+li { list-style: none; }
+
+header { width: 100%; height: 2.25rem; padding-bottom: 0.3rem; }
+header div { padding: 0 0.75rem; padding-top: 0.3rem; }
+header div h1 { display: inline-block; vertical-align: middle; margin-right: 3.5rem; line-height: 1rem; }
+header div h1 a { font-size: 1rem; color: #00BFFF; font-style: italic; }
+header div p { width: 2rem; display: inline-block; text-align: center; vertical-align: middle; }
+header div p span { color: #ddd; font-size: 0.75rem; }
+header div p a { display: block; color: #ddd; font-size: 0.6rem; }
+
+/*# sourceMappingURL=info.css.map */
