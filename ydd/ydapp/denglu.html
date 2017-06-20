@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/denglu.css" />
+		<script src="js/angular.js"></script>
+		<!--<script src="js/denglu.js" type="text/javascript" charset="utf-8"></script>-->
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = innerWidth / 16 + "px"
+		</script>
+	</head>
+
+	<body ng-app="app">
+		<header>
+			<div class="top">
+				<a href="#" class="clearfix">
+					<p class="tb">
+						<span></span>
+
+					</p>
+					<p class="wz">返回首页</p>
+				</a>
+			</div>
+		</header>
+		<section ng-controller="test">
+			<div class="register">
+				<p>
+			<input type="text"  value="" placeholder="请输入用户名" ng-model="user.name" />
+				</p>
+				<p>
+			<input type="password"  value="" placeholder="请输入用户密码" ng-model=" user.pass "/>
+				</p>
+			</div>
+			<p class="dl" ng-click="login()">登录</p>
+			<p ng-show="info.length>0" class="info" >{{info}}</p>
+		</section>
+	</body>
+	<script type="text/javascript">
+		var app = angular.module("app", []);
+		app.controller("test", function($scope, $http, $timeout) {
+			var data = $http.get("users.json"); 
+			data.then(function(list) {
+			console.log(list.data);
+				$scope.list = list.data.usrs;
+			}, function() {
+				alert("fail");
+			})
+			$scope.user = {
+				"name": "",
+				"pass": ""
+			};
+			$scope.login = function() {
+				var arr = $scope.list;
+				console.log(arr)
+				for(var i = 0; i <arr.length; i++) {
+					if(arr[i].username == $scope.user.name && arr[i].password == $scope.user.pass) {
+						$scope.info = "登陆成功";
+						location.href="http://www.baidu.com"
+						$scope.mz = "suc";
+						break;
+					} else {
+						$scope.info = "用户名或密码错误";
+						
+					}
+				}
+				$timeout(function() {
+					$scope.info = "";
+				}, 3000);
+
+			}
+
+		})
+	</script>
+
+</html>

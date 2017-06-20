@@ -1,0 +1,28 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Helvetica,STHeiti,Droid Sans Fallback; }
+
+body, div, ol, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, form, fieldset, legend, input { margin: 0; padding: 0; }
+
+.clearfix::after, .clearfix::before { content: ''; height: 0; display: block; line-height: 0; clear: both; }
+
+html { width: 100%; height: 100%; }
+
+body { width: 100%; height: 100%; background: #eee; -webkit-user-select: none; -webkit-text-size-adjust: 100%; }
+
+a { -webkit-tap-highlight-color: transparent; text-decoration: none; color: black; }
+
+li { list-style: none; }
+
+header { width: 100%; height: 3rem; padding-top: 1rem; background: #fff; }
+header .top a .tb { position: relative; width: 0.8rem; height: 0.8rem; overflow: hidden; float: left; margin-left: 0.5rem; margin-right: 0.75rem; }
+header .top a .tb span { display: block; width: 0.8rem; height: 0.8rem; border: 1px solid #333; transform: rotate(45deg); position: absolute; left: 0.4rem; }
+header .top a .wz { height: 0.8rem; float: left; font-size: 0.7rem; }
+
+section { padding-top: 2rem; width: 100%; position: relative; }
+section .register { width: 100%; }
+section .register p { margin-left: 10%; border: 1px solid #ccc; width: 80%; height: 2.2rem; background: #FFFFFF; }
+section .register p:nth-child(2) { border-top: none; }
+section .register p input { border: none; outline: none; width: 90%; height: 2rem; margin-left: 5%; }
+section .dl { width: 80%; background: blue; margin-left: 10%; margin-top: 1rem; border-radius: 0.25rem; height: 2.2rem; text-align: center; line-height: 2.2rem; color: #fff; font-size: 0.8rem; }
+section .info { position: absolute; top: 0rem; width: 100%; height: 10rem; background: rgba(122, 122, 122, 0.7); text-align: center; color: #333333; line-height: 10rem; }
+
+/*# sourceMappingURL=denglu.css.map */

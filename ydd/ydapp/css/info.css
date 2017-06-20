@@ -1,0 +1,80 @@
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box; font-family: Helvetica, STHeiti, Droid Sans Fallback; }
+
+body, div, ol, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, form, fieldset, legend, input { margin: 0; padding: 0; }
+
+.clearfix::after, .clearfix::before { content: ''; height: 0; display: block; line-height: 0; clear: both; }
+
+html { width: 100%; height: 100%; }
+
+body { width: 100%; height: 100%; background: #eee; -webkit-user-select: none; -webkit-text-size-adjust: 100%; }
+
+a { -webkit-tap-highlight-color: transparent; text-decoration: none; color: black; }
+
+li { list-style: none; }
+
+header { width: 100%; height: 2.25rem; padding-bottom: 0.3rem; border-bottom: 1px solid #CCC; }
+header div { padding: 0 0.75rem; padding-top: 0.3rem; }
+header div h1 { display: inline-block; vertical-align: middle; margin-right: 3.5rem; line-height: 1rem; }
+header div h1 a { font-size: 1rem; color: #00BFFF; font-style: italic; }
+header div p { width: 2rem; display: inline-block; text-align: center; vertical-align: middle; }
+header div p span { color: #ddd; font-size: 0.75rem; }
+header div p a { display: block; color: #999; font-size: 0.6rem; }
+
+section { width: 100%; padding-top: 0.3rem; }
+section .jq { padding: 0.3rem; width: 100%; }
+section .jq .mz { width: 6.5rem; height: 8.5rem; float: left; }
+section .jq .mz img { width: 100%; height: 100%; }
+section .jq .info { float: left; width: 8.25rem; margin-left: 0.6rem; }
+section .jq .info h3 { width: 8.25rem; color: #333333; font-size: 0.8rem; margin-bottom: 0.5rem; }
+section .jq .info span { display: block; color: #CCCCCC; font-size: 0.6rem; margin-bottom: 1rem; }
+section .jq .info p { width: 8.25rem; font-size: 0.8rem; color: #999; }
+section .jq .info a { display: block; background: #095aad; text-align: center; line-height: 1.85rem; width: 3.8rem; height: 1.85rem; color: #FFFFFF; margin-top: 1.25rem; }
+section .tab { width: 100%; }
+section .tab .liebiao { width: 100%; padding: 0.3rem; }
+section .tab .liebiao li { width: 25%; float: left; color: #333333; font-size: 14px; text-align: center; }
+section .tab .liebiao li #dj { display: inline-block; width: 100%; height: 1.65rem; line-height: 1.65rem; border-bottom: 1px solid #E1E1E1; }
+section .tab .liebiao li .lie { margin-top: 0.5rem; width: 15.5rem; position: relative; }
+section .tab .liebiao li .lie hr { border: none; width: 100%; border-top: 1px solid #095aad; position: absolute; top: 2rem; }
+section .tab .liebiao li .lie span { display: block; float: left; width: 3rem; line-height: 2rem; margin-right: 0.4rem; font-size: 0.95rem; }
+section .tab .liebiao li .lie span:nth-child(1) { background: none; }
+section .tab .liebiao li .lie span a { display: block; line-height: 2rem; height: 2rem; }
+section .tab .liebiao li .lie span .ji { width: 15.35rem; position: relative; left: -3.6rem; display: none; }
+section .tab .liebiao li .lie span .ji p { width: 100%; height: 2.2rem; line-height: 2.2rem; text-align: center; background: #FFFFFF; border: 1px solid #CCCCCC; margin: 0.25rem; color: #00BFFF; font-size: 0.7rem; }
+section .tab .liebiao li .lie span .ji1 { width: 15.35rem; position: relative; left: -7rem; display: none; }
+section .tab .liebiao li .lie span .ji1 p { width: 100%; height: 2.2rem; line-height: 2.2rem; text-align: center; background: #FFFFFF; border: 1px solid #CCCCCC; margin: 0.25rem; color: #00BFFF; font-size: 0.7rem; }
+section .tab .liebiao li .lie span .ji2 { width: 15.35rem; position: relative; left: -10.25rem; display: none; }
+section .tab .liebiao li .lie span .ji2 p { width: 100%; height: 2.2rem; line-height: 2.2rem; text-align: center; background: #FFFFFF; border: 1px solid #CCCCCC; margin: 0.25rem; color: #00BFFF; font-size: 0.7rem; }
+section .tab .liebiao li .lie span .on2 { display: block; }
+section .tab .liebiao li .lie .on1 { background: #095aad; color: #FFFFFF; }
+section .tab .liebiao li .bf { display: none; width: 15.35rem; position: relative; margin-top: 0.5rem; left: -7.75rem; background: #EEEEEE; }
+section .tab .liebiao li .bf .tabcon { width: 100%; }
+section .tab .liebiao li .bf .tabcon p { width: 50%; float: left; text-align: left; line-height: 0.8rem; padding: 0.15rem 0; font-size: 0.6rem; }
+section .tab .liebiao li .bf .tabcon p:nth-child(5) { width: 100%; }
+section .tab .liebiao li .bf .mov { width: 15.35rem; }
+section .tab .liebiao li .bf .mov span { color: #333333; font-size: 0.6rem; }
+section .tab .liebiao li .bf .mov P { color: #999999; font-size: #999999; line-height: 1rem; width: 100%; }
+section .tab .liebiao .pl { width: 15.35rem; position: relative; left: -11.75rem; text-align: left; display: none; background: #EEEEEE; }
+section .tab .liebiao .pl .bt h3 { color: #333333; font-size: 0.7rem; }
+section .tab .liebiao .pl .bt h3 span { color: #f93; }
+section .tab .liebiao .on { border: 1px solid #e1e1e1; border-bottom: none; background: #f6f6f6; }
+section .mod { width: 100%; }
+section .mod .th { padding: 0.35rem; width: 100%; height: 2rem; line-height: 2rem; color: #000000; font-size: 0.7Rem; border-bottom: 1px solid #CCCCCC; }
+section .mod .thimg { width: 100%; padding: 0.3rem; }
+section .mod .thimg ul { margin: 0.25rem 0; }
+section .mod .thimg ul li { width: 4.9rem; height: 8.2rem; float: left; }
+section .mod .thimg ul li:nth-child(2) { margin: 0 0.3rem; }
+section .mod .thimg ul li:nth-child(5) { margin: 0 0.3rem; }
+section .mod .thimg ul li .con { position: relative; }
+section .mod .thimg ul li .con a { width: 100%; }
+section .mod .thimg ul li .con a img { width: 4.9rem; height: 6.5rem; }
+section .mod .thimg ul li .con a span { display: block; width: 4.9rem; text-align: center; font-size: 0.6rem; position: absolute; bottom: 1.5rem; }
+section .mod .thimg ul li .con a span em { color: #df8500; }
+section .mod .thimg ul li .con a p { width: 4.9rem; text-align: center; font-size: 0.7rem; }
+
+footer { margin-top: 0.5rem; width: 100%; background-color: #333333; padding: 0.5rem 0; }
+footer ul { padding: 0 0.75rem; width: 100%; display: flex; }
+footer ul li { flex: 1; text-align: center; }
+footer ul li a { color: #DDDDDD; font-size: 0.8rem; text-align: center; }
+footer p { width: 100%; color: #DDDDDD; font-size: 0.6rem; text-align: center; }
+
+/*# sourceMappingURL=info.css.map */
